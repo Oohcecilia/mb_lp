@@ -9,9 +9,9 @@ const hours = [
 ];
 
 const socials = [
-  { type: "icon", icon: Instagram, href: "https://www.instagram.com/giuseppe.iloilo/", label: "Instagram" },
+  { type: "icon", icon: Instagram, href: "https://www.instagram.com/mb.iloilo/", label: "Instagram" },
   { type: "image", icon: tripadvisor, href: "https://www.tripadvisor.com/Restaurant_Review-g298466-d23226019-Reviews-Giuseppe_Pizzeria_Sicilian_Roast_Iloilo_City-Iloilo_City_Iloilo_Province_Panay_I.html", label: "Tripadvisor" },
-  { type: "icon", icon: Facebook, href: "https://www.facebook.com/GiuseppeIloilo", label: "Facebook" },
+  { type: "icon", icon: Facebook, href: "https://www.facebook.com/mbiloilo", label: "Facebook" },
 ];
 
 const LAT = 10.7202;
