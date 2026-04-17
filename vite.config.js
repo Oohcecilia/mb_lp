@@ -9,4 +9,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/mb_lp/",
+  build: {
+    outDir: "docs"
+  }
 })
