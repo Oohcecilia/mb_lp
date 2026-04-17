@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Arena High-Contrast Palette */
+    --background: 0 0% 100%;
+    --foreground: 240 7% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 7% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 7% 4%;
+
+    /* Stadium Red */
+    --primary: 357 73% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Championship Gold */
+    --secondary: 47 99% 52%;
+    --secondary-foreground: 240 7% 4%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 240 5% 40%;
+
+    --accent: 47 99% 52%;
+    --accent-foreground: 240 7% 4%;
+
+    --destructive: 357 73% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 357 73% 45%;
+
+    /* Midnight Turf */
+    --midnight: 240 7% 4%;
+    --midnight-foreground: 0 0% 100%;
+
+    --chart-1: 357 73% 45%;
+    --chart-2: 47 99% 52%;
+    --chart-3: 240 7% 4%;
+    --chart-4: 0 0% 50%;
+    --chart-5: 0 0% 80%;
+
+    --radius: 0.25rem;
+
+    --font-display: 'Bebas Neue', 'Oswald', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  .dark {
+    --background: 240 7% 4%;
+    --foreground: 0 0% 100%;
+    --card: 240 7% 6%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 7% 6%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 357 73% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 47 99% 52%;
+    --secondary-foreground: 240 7% 4%;
+    --muted: 240 5% 12%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 47 99% 52%;
+    --accent-foreground: 240 7% 4%;
+    --destructive: 357 73% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5% 14%;
+    --input: 240 5% 14%;
+    --ring: 357 73% 50%;
+    --midnight: 0 0% 100%;
+    --midnight-foreground: 240 7% 4%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-feature-settings: "ss01", "cv11";
+  }
+  .font-display { font-family: var(--font-display); letter-spacing: 0.01em; }
+  .font-heading { font-family: var(--font-heading); }
+  .font-mono { font-family: var(--font-mono); }
+
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0.005em; }
+}
+
+@layer utilities {
+  .bg-midnight { background-color: hsl(var(--midnight)); }
+  .text-midnight { color: hsl(var(--midnight)); }
+  .border-midnight { border-color: hsl(var(--midnight)); }
+
+  .glow-red {
+    box-shadow: 0 0 0 1px rgba(197, 32, 38, 0.4), 0 0 24px -4px rgba(197, 32, 38, 0.5);
+  }
+  .glow-gold {
+    box-shadow: 0 0 0 1px rgba(255, 199, 11, 0.5), 0 0 28px -4px rgba(255, 199, 11, 0.55);
+  }
+  .text-glow-red { text-shadow: 0 0 18px rgba(197, 32, 38, 0.55); }
+  .text-glow-gold { text-shadow: 0 0 18px rgba(255, 199, 11, 0.55); }
+
+  .broadcast-rail {
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)) 20%, hsl(var(--secondary)) 50%, hsl(var(--primary)) 80%, transparent);
+    height: 1px;
+  }
+
+  .grain::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.08; pointer-events: none; mix-blend-mode: overlay;
+  }
+
+  .pulse-red {
+    animation: pulseRed 2s ease-in-out infinite;
+  }
+  @keyframes pulseRed {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(197, 32, 38, 0.55), 0 10px 30px -10px rgba(197, 32, 38, 0.6); }
+    50% { box-shadow: 0 0 0 14px rgba(197, 32, 38, 0), 0 10px 30px -10px rgba(197, 32, 38, 0.8); }
+  }
+
+  .ticker-scroll {
+    animation: tickerScroll 45s linear infinite;
+  }
+  @keyframes tickerScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .live-dot {
+    position: relative;
+  }
+  .live-dot::after {
+    content: ''; position: absolute; inset: -4px; border-radius: 9999px;
+    background: hsl(var(--primary)); opacity: 0.5;
+    animation: liveDot 1.4s ease-out infinite;
+  }
+  @keyframes liveDot {
+    0% { transform: scale(0.6); opacity: 0.6; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+
+  .clip-angle {
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-scroll, .pulse-red, .live-dot::after { animation: none !important; }
+  }
+
+  *:focus-visible {
+    outline: 3px solid hsl(var(--secondary));
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+}
