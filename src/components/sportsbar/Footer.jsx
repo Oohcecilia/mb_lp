@@ -18,7 +18,7 @@ const LOCATIONS = [
   {
     id: "iloilo",
     name: "Iloilo Branch",
-    mapUrl: "https://www.google.com/maps?q=Giuseppe+Iloilo&output=embed",
+    mapUrl: "https://www.google.com/maps?q=Monkey+Business+Sports+Bar&output=embed",
     address: "Riverside Boardwalk 5000, Iloilo City, Philippines",
     phone: "0928 353 7154",
     socials: [
@@ -48,7 +48,7 @@ const LOCATIONS = [
   {
     id: "boracay",
     name: "Boracay Branch",
-    mapUrl: "https://www.google.com/maps?q=Giuseppe+Boracay&output=embed",
+    mapUrl: "https://www.google.com/maps?q=Monkey+Business+Sports+Bar+Boracay&output=embed",
     address:
       "Station 3, Ambulong, Brgy. Manoc-Manoc, Boracay, Malay, Philippines",
     phone: "0998 727 2399",

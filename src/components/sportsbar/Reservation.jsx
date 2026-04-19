@@ -30,7 +30,7 @@ export default function Reservation() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="w-10 h-px bg-secondary" />
-            <span className="font-mono text-[11px] tracking-[0.3em] text-secondary">MONKEY · BUSINESS </span>
+            <span className="font-mono text-[11px] tracking-[0.3em] text-secondary">MONKEY · BUSINESS · SUITE </span>
             <span className="w-10 h-px bg-secondary" />
           </div>
           <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.9]">

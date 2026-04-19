@@ -5,7 +5,7 @@ import { Volume2, MonitorPlay, Users, Quote } from 'lucide-react';
 const features = [
   {
     icon: MonitorPlay,
-    title: "Live HD Screens",
+    title: "HD Screens",
     desc: "Crystal-clear viewing from every angle."
   },
   {
@@ -22,8 +22,8 @@ const features = [
 
 const quotes = [
   { q: 'Best atmosphere in the city, hands down. Felt like I was in the stadium.', a: 'MARCUS T.', role: 'Season Ticket Holder' },
-  { q: 'The wings + a Champions League final? It does not get better.', a: 'SOFIA R.', role: 'Foodie & Fan' },
-  { q: 'Reserved the VIP dugout for UFC — they took care of everything.', a: 'DAVID K.', role: 'Fight Night Regular' },
+  { q: 'The mocktails + a Champions League final? It does not get better.', a: 'SOFIA R.', role: 'Foodie & Fan' },
+  { q: 'Reserved the VIP for UFC — they took care of everything.', a: 'DAVID K.', role: 'Fight Night Regular' },
 ];
 
 export default function Experience() {
