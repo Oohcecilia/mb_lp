@@ -30,7 +30,7 @@ export default function Reservation() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="w-10 h-px bg-secondary" />
-            <span className="font-mono text-[11px] tracking-[0.3em] text-secondary">MONKEY · BUSINESS · SUITE</span>
+            <span className="font-mono text-[11px] tracking-[0.3em] text-secondary">MONKEY · BUSINESS </span>
             <span className="w-10 h-px bg-secondary" />
           </div>
           <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.9]">
@@ -62,40 +62,71 @@ export default function Reservation() {
                       Reservations & Contact
                     </h2>
                     <p className="text-sm md:text-base text-white/60 max-w-md mx-auto">
-                      Call our hotline or visit us directly to secure your spot before game night fills up.
+                      Call our phone number or visit us directly to secure your spot before game night fills up.
                     </p>
                   </div>
 
-                  {/* Details */}
-                  <div className="w-full max-w-md space-y-6 text-white/80">
+                  {/* Locations */}
+                  <div className="w-full max-w-2xl flex flex-col sm:flex-row gap-8 text-white/80">
 
-                    {/* Location */}
-                    <div>
-                      <div className="text-xs uppercase tracking-widest text-white/40 mb-1">
-                        Location
+                    {/* Location 1 */}
+                    <div className="flex-1 space-y-4">
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-white/40 mb-1">
+                          Location
+                        </div>
+                        <div className="text-sm md:text-base leading-relaxed">
+                          Riverside Boardwalk, <br />
+                          Iloilo City, Philippines
+                        </div>
                       </div>
-                      <div className="text-sm md:text-base leading-relaxed">
-                        Riverside Boardwalk<br />
-                        5000 Iloilo City
+
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-white/40 mb-1">
+                          Phone
+                        </div>
+                        <a
+                          href="tel:09283537154"
+                          className="text-lg md:text-xl text-secondary font-semibold hover:opacity-80 transition"
+                        >
+                          0928 353 7154
+                        </a>
                       </div>
                     </div>
 
-                    {/* Phone */}
-                    <div>
-                      <div className="text-xs uppercase tracking-widest text-white/40 mb-1">
-                        Phone
+                    {/* Divider (only visible on sm+) */}
+                    <div className="hidden sm:block w-px bg-white/10" />
+
+                    {/* Location 2 */}
+                    <div className="flex-1 space-y-4">
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-white/40 mb-1">
+                          Location
+                        </div>
+                        <div className="text-sm md:text-base leading-relaxed">
+                          Station 3, Ambulong, <br />
+                          Brgy. Manoc-Manoc, Boracay, Malay, Philippines
+                        </div>
                       </div>
-                      <a
-                        href="tel:09283537154"
-                        className="text-lg md:text-xl text-secondary font-semibold hover:opacity-80 transition"
-                      >
-                        0928 353 7154
-                      </a>
+
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-white/40 mb-1">
+                          Phone
+                        </div>
+                        <a
+                          href="tel:09123456789"
+                          className="text-lg md:text-xl text-secondary font-semibold hover:opacity-80 transition"
+                        >
+                          0998 727 2399
+                        </a>
+                      </div>
                     </div>
 
                   </div>
 
                 </div>
+
+
               </div>
             </div>
           </div>

@@ -3,9 +3,21 @@ import { motion } from 'framer-motion';
 import { Volume2, MonitorPlay, Users, Quote } from 'lucide-react';
 
 const features = [
-  { icon: MonitorPlay, title: 'Massive Screens', desc: '40 HD + one 20-ft mega-wall.' },
-  { icon: Volume2, title: 'Surround Sound', desc: 'Dolby Atmos matchday mix.' },
-  { icon: Users, title: 'Crowd Energy', desc: '300+ fans. One heartbeat.' },
+  {
+    icon: MonitorPlay,
+    title: "Live HD Screens",
+    desc: "Crystal-clear viewing from every angle."
+  },
+  {
+    icon: Volume2,
+    title: "Stadium Sound Experience",
+    desc: "Immersive audio tuned for live sports intensity."
+  },
+  {
+    icon: Users,
+    title: "Lively Bar Atmosphere",
+    desc: "A vibrant energy, and nonstop game-day vibe."
+  },
 ];
 
 const quotes = [

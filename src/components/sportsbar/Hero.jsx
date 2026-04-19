@@ -2,12 +2,25 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, UtensilsCrossed } from 'lucide-react';
 import mascot from "@/assets/MB_logo-1.png";
+import heroBg from "@/assets/HERO_BG.png";
 
 
 
 export default function Hero() {
   return (
     <section id="top" className="relative min-h-screen bg-midnight text-white overflow-hidden pt-24">
+
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroBg}
+          alt=""
+          className="w-full h-full object-cover opacity-10"
+        />
+
+        {/* Fade overlay (top + bottom) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-midnight via-transparent to-midnight" />
+      </div>
 
       <div aria-hidden className="absolute right-0 top-30 font-display text-[22rem] leading-none text-white/[0.04] select-none pointer-events-none">
         MB
@@ -60,18 +73,19 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-10 flex flex-col sm:flex-row gap-4 max-w-md mx-auto lg:mx-0"
           >
             <a
               href="#reserve"
-              className="group inline-flex items-center gap-3 bg-primary hover:bg-primary text-white font-heading uppercase tracking-widest text-sm px-7 py-4 pulse-red"
+              className="group flex-1 inline-flex justify-center items-center gap-3 bg-primary text-white font-heading uppercase tracking-widest text-sm px-7 py-4 pulse-red"
             >
               Reserve a Table
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
+
             <a
               href="#menu"
-              className="group inline-flex items-center gap-3 border border-white/20 hover:border-secondary backdrop-blur-md bg-white/[0.03] text-white font-heading uppercase tracking-widest text-sm px-7 py-4 transition-all hover:bg-white/[0.06]"
+              className="group flex-1 inline-flex justify-center items-center gap-3 border border-white/20 hover:border-secondary backdrop-blur-md bg-white/[0.03] text-white font-heading uppercase tracking-widest text-sm px-7 py-4 transition-all hover:bg-white/[0.06]"
             >
               <UtensilsCrossed className="w-4 h-4 fill-secondary text-secondary" />
               View Menu
@@ -87,12 +101,13 @@ export default function Hero() {
           >
             {[
               { k: 'HD Screens' },
-              { k: 'Beers'},
-              { k: 'VIP Suites'},
-            ].map(s => (
-              <div key={s.v}>
-                <div className="font-display text-[18px] text-secondary text-glow-gold">{s.k}</div>
-                {/* <div className="font-mono text-[10px] tracking-[0.25em] text-white/50 uppercase mt-1">{s.v}</div> */}
+              { k: 'Beers' },
+              { k: 'VIP Suites' },
+            ].map((s, i) => (
+              <div key={i}>
+                <div className="font-display text-[18px] text-secondary text-glow-gold text-center">
+                  {s.k}
+                </div>
               </div>
             ))}
           </motion.div>

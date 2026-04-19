@@ -95,15 +95,14 @@ export default function Menu() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          {items.map((it, i) => <FoodCard key={it.name} item={it} idx={i} onHover={setTint} />)}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          {items.map((it, i) => (
+            <FoodCard  key={it.cat} item={it} idx={i} onHover={setTint} />
+          ))}
         </div>
 
         <div className="mt-12 flex items-center justify-between border-t border-midnight/10 pt-6">
           <span className="font-mono text-xs tracking-widest text-midnight/60">BEST SPORTSBAR IN TOWN</span>
-          {/* <a href="#" className="font-heading tracking-widest uppercase text-sm text-midnight hover:text-primary transition-colors">
-            Full Menu →
-          </a> */}
         </div>
       </div>
     </section>
