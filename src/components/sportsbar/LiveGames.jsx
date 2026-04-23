@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Tv } from 'lucide-react';
 import { motion } from 'framer-motion';
+import f1_image from '@/assets/f1_racing.jpg'
 
 const sports = [
   {
@@ -45,7 +46,7 @@ const sports = [
     leagues: ['F1 World Championship', 'MotoGP', 'IndyCar', 'Formula E'],
     desc: 'Feel every lap, every pit stop and every overtake on race day. Multi-screen setups so you never miss a moment of the action.',
     screens: 6,
-    img: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=85&auto=format&fit=crop'
+    img: f1_image
   }
 ];
 

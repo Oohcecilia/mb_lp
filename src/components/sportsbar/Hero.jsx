@@ -118,16 +118,22 @@ export default function Hero() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="lg:col-span-4 hidden lg:block bg-transparent"
+          className="lg:col-span-4 flex flex-col items-center lg:items-end"
         >
-          <div className="relative bg-transparent  flex items-center justify-center">
+          <div className="relative flex items-center justify-center w-full">
             <img
               src={mascot}
               alt="Mascot"
-              className="w-full max-w-sm h-auto max-h-[220px] md:max-h-[300px] lg:max-h-[400px] object-contain hover:scale-105 transition-transform duration-500"
+              className="
+        w-32 sm:w-40 md:w-48 lg:w-full
+        max-h-[120px] sm:max-h-[160px] md:max-h-[220px] lg:max-h-[400px]
+        object-contain
+        hover:scale-105 transition-transform duration-500
+      "
             />
           </div>
-          <div className="mt-4 font-mono text-[10px] tracking-[0.25em] text-white/40 text-right">
+
+          <div className="mt-3 font-mono text-[9px] sm:text-[10px] tracking-[0.25em] text-white/40 text-center lg:text-right">
             KICK · OFF · LIVE · NOW
           </div>
         </motion.div>

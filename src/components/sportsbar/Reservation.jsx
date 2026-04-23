@@ -92,9 +92,27 @@ export default function Reservation() {
                           0928 353 7154
                         </a>
                       </div>
+
+                      {/* ✅ Opening Hours */}
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-white/40 mb-2">
+                          Opening Hours
+                        </div>
+
+                        <div className="space-y-1 font-mono text-xs md:text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-white/50">Mon - Thu</span>
+                            <span className="text-white">10:00 AM – 12:00 AM</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-white/50">Fri - Sun</span>
+                            <span className="text-white">10:00 AM – 2:00 AM</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Divider (only visible on sm+) */}
+                    {/* Divider */}
                     <div className="hidden sm:block w-px bg-white/10" />
 
                     {/* Location 2 */}
@@ -114,11 +132,25 @@ export default function Reservation() {
                           Phone
                         </div>
                         <a
-                          href="tel:09123456789"
+                          href="tel:09987272399"
                           className="text-lg md:text-xl text-secondary font-semibold hover:opacity-80 transition"
                         >
                           0998 727 2399
                         </a>
+                      </div>
+
+                      {/* ✅ Opening Hours */}
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-white/40 mb-2">
+                          Opening Hours
+                        </div>
+
+                        <div className="space-y-1 font-mono text-xs md:text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-white/50">Mon - Sun</span>
+                            <span className="text-white">10:00 AM – 12:00 AM</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
 

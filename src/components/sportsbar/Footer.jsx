@@ -44,6 +44,10 @@ const LOCATIONS = [
         color: "text-green-400 hover:border-green-400",
       },
     ],
+    hours: [
+      { d: "Mon - Thu", h: "10:00 AM – 12:00 AM" },
+      { d: "Fri - Sun", h: "10:00 AM – 2:00 AM" },
+    ],
   },
   {
     id: "boracay",
@@ -56,6 +60,9 @@ const LOCATIONS = [
       { type: "icon", color: "text-pink-500 hover:border-pink-500", icon: Instagram, href: "https://www.instagram.com/giuseppe.boracay/", label: "Instagram" },
       { type: "icon", color: "text-blue-500 hover:border-blue-500", icon: Facebook, href: "https://www.facebook.com/monkeybusinessboracay", label: "Facebook" },
       { type: "image", color: "text-green-400 hover:border-green-400", icon: tripadvisor, href: "https://www.tripadvisor.com/Restaurant_Review-g26259616-d25436904-Reviews-Giuseppe_Pizzeria_And_Sicilian_Roast_Boracay_Island-Manoc_Manoc_Boracay_Malay_.html", label: "Tripadvisor" },
+    ],
+    hours: [
+      { d: "Mon - Sun", h: "10:00 AM – 12:00 AM" },
     ],
   },
 ];
@@ -202,19 +209,25 @@ export default function Footer() {
             </div>
 
             <div className="border-t border-white/10">
-              {hours.map((h, i) => (
-                <motion.div
-                  key={h.d}
-                  initial={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.3 + i * 0.06 }}
-                  className="flex items-center justify-between py-3.5 border-b border-white/8 font-mono text-xs px-1 -mx-1"
-                >
-                  <span className="text-white/55 tracking-widest">{h.d}</span>
-                  <span className="text-white tracking-wider">{h.h}</span>
-                </motion.div>
-              ))}
+              {activeLoc.hours?.length ? (
+                activeLoc.hours.map((h, i) => (
+                  <motion.div
+                    key={h.d}
+                    initial={{ opacity: 0, x: 10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3 + i * 0.06 }}
+                    className="flex items-center justify-between py-3.5 border-b border-white/8 font-mono text-xs px-1 -mx-1"
+                  >
+                    <span className="text-white/55 tracking-widest">{h.d}</span>
+                    <span className="text-white tracking-wider">{h.h}</span>
+                  </motion.div>
+                ))
+              ) : (
+                <div className="py-4 text-white/40 text-sm">
+                  Hours not available
+                </div>
+              )}
             </div>
 
             <a
