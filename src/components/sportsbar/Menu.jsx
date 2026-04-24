@@ -23,7 +23,7 @@ const items = [
   {
     cat: 'BEERS',
     img: `${beer}`,
-    desc: 'HEINEKEN, ASAHI TIGER CRYSTAL LIGHT, SAN MIGUEL PILSEN.',
+    desc: 'HEINEKEN, ASAHI, TIGER CRYSTAL LIGHT, SAN MIGUEL PILSEN.',
     tint: 'rgba(255, 199, 11, 0.08)'
   },
   {
