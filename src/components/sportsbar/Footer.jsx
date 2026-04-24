@@ -3,16 +3,6 @@ import { MapPin, Clock, Instagram, Facebook, Mail, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import tripadvisor from "@/assets/tripadvisor.svg";
 
-const hours = [
-  { d: 'SUN - WED', h: '5:30PM - 12AM' },
-  { d: 'THU - SAT ', h: '5:30PM - 2AM' }
-];
-
-const socials = [
-  { type: "icon", icon: Instagram, href: "https://www.instagram.com/mb.iloilo/", label: "Instagram" },
-  { type: "image", icon: tripadvisor, href: "https://www.tripadvisor.com/", label: "Tripadvisor" },
-  { type: "icon", icon: Facebook, href: "https://www.facebook.com/mbiloilo", label: "Facebook" },
-];
 
 const LOCATIONS = [
   {
@@ -62,7 +52,8 @@ const LOCATIONS = [
       { type: "image", color: "text-green-400 hover:border-green-400", icon: tripadvisor, href: "https://www.tripadvisor.com/Restaurant_Review-g26259616-d25436904-Reviews-Giuseppe_Pizzeria_And_Sicilian_Roast_Boracay_Island-Manoc_Manoc_Boracay_Malay_.html", label: "Tripadvisor" },
     ],
     hours: [
-      { d: "Mon - Sun", h: "10:00 AM – 12:00 AM" },
+      { d: "Sun - Thu", h: "10:00 AM – 12:00 AM" },
+      { d: "Fir - Dat", h: "10:00 AM – 2:00 AM" },
     ],
   },
 ];
