@@ -35,8 +35,8 @@ const LOCATIONS = [
       },
     ],
     hours: [
-      { d: "Mon - Thu", h: "10:00 AM – 12:00 AM" },
-      { d: "Fri - Sun", h: "10:00 AM – 2:00 AM" },
+      { d: "Mon - Thu", h: "10:00 AM – 12:00 MN" },
+      { d: "Fri - Sun", h: "10:00 AM – 2:00 AM (next day)" },
     ],
   },
   {
@@ -52,8 +52,8 @@ const LOCATIONS = [
       { type: "image", color: "text-green-400 hover:border-green-400", icon: tripadvisor, href: "https://www.tripadvisor.com/Restaurant_Review-g26259616-d25436904-Reviews-Giuseppe_Pizzeria_And_Sicilian_Roast_Boracay_Island-Manoc_Manoc_Boracay_Malay_.html", label: "Tripadvisor" },
     ],
     hours: [
-      { d: "Sun - Thu", h: "10:00 AM – 12:00 AM" },
-      { d: "Fir - Dat", h: "10:00 AM – 2:00 AM" },
+      { d: "Sun - Thu", h: "10:00 AM – 12:00 MN" },
+      { d: "Fir - Dat", h: "10:00 AM – 2:00 AM (next day)" },
     ],
   },
 ];

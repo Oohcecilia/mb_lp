@@ -102,7 +102,7 @@ export default function Reservation() {
                         <div className="space-y-1 font-mono text-xs md:text-sm">
                           <div className="flex justify-between">
                             <span className="text-white/50">Mon - Thu</span>
-                            <span className="text-white">10:00 AM – 12:00 AM</span>
+                            <span className="text-white">10:00 AM – 12:00 MN</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-white/50">Fri - Sun</span>
@@ -148,7 +148,7 @@ export default function Reservation() {
                         <div className="space-y-1 font-mono text-xs md:text-sm">
                           <div className="flex justify-between">
                             <span className="text-white/50">Sun - Thu</span>
-                            <span className="text-white">10:00 AM – 12:00 AM</span>
+                            <span className="text-white">10:00 AM – 12:00 MN</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-white/50">Fri - Sat</span>
